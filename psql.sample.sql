@@ -7,3 +7,5 @@ SELECT rollno,first_name,last_name,brith_date FROM student_details ORDER BY firs
  SELECT rollno,first_name,LENGTH(last_name)len,brith_date FROM student_details ORDER BY LENGTH(last_name) DESC;
  SELECT first_name||' '||last_name AS full_name FROM student_details;
   SELECT first_name FROM student_details WHERE first_name LIKE 'd%';
+SELECT rollno,first_name FROM student_details ORDER BY first_name FETCH FIRST 2 ROW ONLY;
+SELECT rollno,first_name FROM student_details ORDER BY first_name OFFSET 2 ROWS FETCH FIRST 1 ROW ONLY;
